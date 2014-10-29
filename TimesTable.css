@@ -1,0 +1,128 @@
+/* 
+Eamon Lightning
+eamon_lightning@student.uml.edu
+Sound Recording Technology major; Computer Science minor.
+Created on October 22, 2014
+
+This file contains css styles that complement a single page 
+web application that constructs multiplication tables dynamically. 
+*/
+     
+/* Sytles the 'X' in the page's header. "Cinzel" is a Google
+web font. */
+header span {
+  font-family: Cinzel, serif;
+  font-size: 47px;
+  font-weight: 100;
+}
+
+/* Ensures that the width of the table's cells are fixed.
+Adds a subtle background color, which is a bit easier on 
+the eyes. */
+table {
+  table-layout: fixed;
+  width: 0px;
+  background-color: #CFE8D5;    
+} 
+
+/* Adds a border to the cells of the table so that the 
+content of table is more visually organized. */
+td, th {
+  border: thin solid gray;
+  width: 80px;
+  text-align: center;
+  background-color: white;
+}
+
+/* Adds some spacing between input feilds so that the
+user can tell which prompt belongs to which feild. */
+input {
+  width: 80px;
+  margin-right: 25px;
+}
+
+/* Centers error messages and displays them in red. */
+#feedback {
+  color: red;
+  position: relative;
+  text-align: center;
+  top: 180px;
+}
+
+/* Adds a slightly-rounded border and a nice 
+background color to the form. */
+form {
+  font-size: 15px;
+  border: thin solid black;
+  border-radius: 6px;
+  width: 58em;
+  background-color: #CDE8E1;
+  padding: 5px;
+  position: absolute;
+  right: 17%;
+  left: auto;
+}
+
+/* Used to make the content of the leftmost column 
+and the uppermost row stand out from the table's body. */
+.frame {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Separates the page's banner and static content from the
+mutliplication table. The banner is fixed so that the expression
+of each <td> cell is always visible, and so that the user may
+enter new parameters no matter where they are on the page. */
+#heading {
+  position: fixed;
+  background-color: #20E896;
+  z-index: 10;
+  width: 100%;
+  height: 140px;
+  padding: 10px;
+  top: 0px;
+  left: -10px;
+  text-align: center;
+}
+
+/* Positions the table right under the page's banner. Its 
+relatively small z-index ensures that its contents slide 
+under the banner. */
+#table {
+  position: relative;
+  top: 163px;
+  z-index: 0;
+}
+
+/* Changes the appearance of the <td> element that the cursor
+hovers over. This makes it visually easier for a user to lock 
+in on a single cell. */
+.cell:hover {
+  color: white;
+  background-color: #A0A0A0;
+}
+
+/* Increases the spacing between the header's letters to make
+them more readable. */
+header {
+  font-size: 32px;
+  font-family: times, serif;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+/* Positions the expression (calculation) in the center
+of the window. */
+#calc {
+  display: inline;
+  position: relative;
+  top: 41px;
+  font-size: 19px;
+}
+
+/* Ensures that the vertical scroll bar does not cause the
+layout of the page to change. */ 
+html {
+  overflow-y: scroll;
+}

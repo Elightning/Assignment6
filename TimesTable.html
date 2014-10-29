@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head lang='en'>
+    <title> Times Table </title>
+      <meta charset="utf-8">
+    
+    <!--
+    Eamon Lightning
+    eamon_lightning@student.uml.edu
+    Sound Recording Technology major; Computer Science minor.
+    Created on October 22, 2014
+
+    This is a single page web application that accepts parameters from a user via an html form and uses said parameters to construct a multiplication table dynamically using javascript. 
+     -->
+
+    <!-- Google web font used for the site's header -->
+    <link href='http://fonts.googleapis.com/css?family=Cinzel:400,700' rel='stylesheet' type='text/css'>
+    <link href="TimesTable.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="TimesTable.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- The heading div comprises all of the content that is static
+    on the page, which includes the header and form elements. -->
+    <div id="heading">
+
+      <!-- span tag is used for styling purposes -->
+      <header> Times <span>X</span> Table </header>
+
+      <!-- The form element contains five input feilds. Four
+      accept parameters provided by the user, and the fifth
+      is a submit button -->
+      <form id="form" action="javascript:void(0)">
+        Row Min: <input type="text" name="rowmin">
+        Row Max: <input type="text" name="rowmax">
+        Column Min: <input type="text" name="colmin">
+        Column Max: <input type="text" name="colmax">
+        <input type="submit" name="submit" value="Display">
+      </form>
+
+      <!-- The calc div contains the expression that displays
+      in which row and column a product exists. -->
+      <div id="calc"></div>
+    </div>
+
+    <!-- The feedback div contains error messages that are
+    output when the user enters invalid parameters -->
+    <div id="feedback"></div>
+
+    <!-- The table div contains the multiplication table that is built based on user input -->
+    <div id="table"></div>
+
+  </body>
+
+</html>
